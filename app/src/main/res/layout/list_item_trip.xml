@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/trip_item_time_hight"
+        android:layout_marginLeft="20dp"
+        android:gravity="center_vertical" />
+
+    <View
+        android:id="@+id/divider_1"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:layout_alignBottom="@id/list_trip"
+        android:background="@drawable/divider"/>
+    <LinearLayout
+        android:id="@+id/container_image"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/my_trip_item_time_vector" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/text_bike_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/font_color_gray"
+        android:layout_below="@+id/text_time"
+        android:layout_alignLeft="@id/text_time"/>
+    <TextView
+        android:id="@+id/text_rode_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/font_color_gray"
+        android:drawableLeft="@drawable/my_trip_item_duration_img"
+        android:drawablePadding="10dp"
+        android:layout_below="@id/text_bike_number"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/text_bike_number"
+        android:layout_alignStart="@+id/text_bike_number" />
+    <TextView
+        android:id="@+id/text_rode_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/font_color_gray"
+        android:drawableLeft="@drawable/my_trip_item_cost_img"
+        android:drawablePadding="10dp"
+        android:layout_alignTop="@id/text_rode_time"
+        android:layout_toRightOf="@id/text_rode_time"
+        android:layout_toEndOf="@id/text_rode_time"
+        android:layout_marginLeft="53dp"
+        android:layout_marginStart="53dp" />
+
+
+</RelativeLayout>

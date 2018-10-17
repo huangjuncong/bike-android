@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_dialog">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/title_custom_service"
+        android:textColor="@color/font_color_gray"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_divider" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/bg_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_can_not_open_lock"
+                style="@style/DialogItem"
+                android:drawableTop="@drawable/ic_home_bottomsheet_lock"
+                android:text="@string/can_not_lock" />
+
+            <TextView
+                android:id="@+id/btn_find_problem"
+                style="@style/DialogItem"
+                android:drawableTop="@drawable/ic_home_bottomsheet_fix"
+                android:text="@string/fix" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bg_top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_waring"
+                style="@style/DialogItem"
+                android:drawableTop="@drawable/ic_home_bottomsheet_warnning"
+                android:text="@string/waring" />
+
+            <TextView
+                android:id="@+id/btn_feedback"
+                style="@style/DialogItem"
+                android:drawableTop="@drawable/ic_home_bottomsheet_feedback"
+                android:text="@string/feedback" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"
+            android:background="@color/color_divider" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:background="@color/color_divider" />
+
+    </RelativeLayout>
+
+</LinearLayout>

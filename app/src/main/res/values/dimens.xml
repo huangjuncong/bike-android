@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_common">20dp</dimen>
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="font_size_maximum">20sp</dimen>
+    <dimen name="font_size_large">16sp</dimen>
+    <dimen name="font_size_common">14sp</dimen>
+    <dimen name="font_size_small">11sp</dimen>
+    <dimen name="margin_150">150dp</dimen>
+    <dimen name="trip_item_time_hight">30dp</dimen>
+</resources>

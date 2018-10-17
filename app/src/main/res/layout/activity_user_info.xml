@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/text_my_head_img"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:drawableRight="@drawable/ic_arrow_right"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:clickable="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="@string/my_head_img" />
+    <View
+        android:layout_below="@id/text_my_head_img"
+        style="@style/ViewDivider"/>
+    <TextView
+        android:id="@+id/item_nike_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:drawableRight="@drawable/ic_arrow_right"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/nike_name"
+        android:clickable="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_below="@+id/text_my_head_img"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <View
+        android:layout_below="@id/item_nike_name"
+        style="@style/ViewDivider"/>
+    <TextView
+        android:id="@+id/item_phone"
+        android:layout_below="@id/item_nike_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:clickable="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="@string/phone_number" />
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img_head"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="45dp"
+        android:src="@drawable/fg_head"
+        android:scaleType="fitCenter"
+        app:riv_corner_radius="30dip" />
+    <TextView
+        android:id="@+id/text_nike_name"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:layout_alignTop="@id/item_nike_name"
+        android:layout_alignRight="@id/img_head"
+        android:textColor="@color/font_color_gray"/>
+    <TextView
+        android:id="@+id/text_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:layout_alignTop="@id/item_phone"
+        android:layout_alignRight="@id/img_head"
+        android:textColor="@color/font_color_gray"/>
+</RelativeLayout>

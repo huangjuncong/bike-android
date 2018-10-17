@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/bg_top"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:background="@drawable/bg_user_account" />
+
+    <ImageView
+        android:id="@+id/image_head"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:clickable="true"/>
+
+    <View
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignTop="@id/image_head"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/fg_head" />
+
+    <TextView
+        android:id="@+id/text_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/text_my_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:drawableRight="@drawable/ic_arrow_right"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/my_wallet"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_below="@+id/bg_top" />
+
+    <View
+        android:layout_below="@id/text_my_wallet"
+        style="@style/ViewDivider" />
+
+    <TextView
+        android:id="@+id/text_my_trip"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/text_my_wallet"
+        android:drawableRight="@drawable/ic_arrow_right"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/my_trip"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"/>
+
+    <View
+        android:layout_below="@id/text_my_trip"
+        style="@style/ViewDivider"/>
+
+    <TextView
+        android:id="@+id/text_my_banlance"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="0元"
+        android:layout_alignTop="@id/text_my_wallet"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"/>
+    <Button
+        android:id="@+id/btn_login_out"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="20dp"
+        android:textColor="@color/font_color_white"
+        android:background="@drawable/bg_button_common"
+        android:layout_below="@+id/text_my_trip"
+        android:text="@string/login_out"/>
+</RelativeLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.coder520.mamabike.ui.activity.MainActivity">
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mapview_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/container_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/color_primary_dark"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/mobike_title_img" />
+
+        <ImageView
+            android:id="@+id/btn_message"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ripple_bg"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@drawable/ic_home_message" />
+
+        <ImageView
+            android:id="@+id/btn_search"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="-10dp"
+            android:layout_toLeftOf="@id/btn_message"
+            android:background="@drawable/ripple_bg"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@drawable/ic_home_search" />
+
+        <ImageView
+            android:id="@+id/btn_user_settings"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignBottom="@id/btn_message"
+            android:layout_alignTop="@id/btn_message"
+            android:background="@drawable/ripple_bg"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@drawable/ic_home_menu" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/container_in_rode"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/container_action_bar"
+        android:orientation="horizontal"
+        android:background="#88ffffff">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/in_rode"
+            android:textSize="@dimen/font_size_maximum"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/color_primary"/>
+        <TextView
+            android:id="@+id/text_rode_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size_maximum"
+            android:textStyle="bold"
+            android:textColor="@color/color_primary"
+            android:text="1 min 59 s"
+            android:layout_centerInParent="true"/>
+        <Button
+            android:id="@+id/btn_end_ride"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="@string/end_ride"
+            android:layout_alignParentRight="true"
+            android:background="@color/color_primary"
+            android:textColor="@color/font_color_white"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/container_click_to_scan"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/ripple_bg_scan"
+        android:clickable="true"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home_scanning" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/scan_open_lock"
+            android:textColor="@color/font_color_white" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:elevation="4dp"
+        android:clickable="true"
+        android:src="@drawable/bt_home_location"
+        android:layout_alignTop="@+id/btn_service"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp" />
+
+    <ImageView
+        android:id="@+id/btn_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_location"
+        android:layout_alignLeft="@id/btn_location"
+        android:elevation="4dp"
+        android:clickable="true"
+        android:src="@drawable/bt_home_refresh" />
+
+    <ImageView
+        android:id="@+id/btn_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="16dp"
+        android:elevation="4dp"
+        android:clickable="true"
+        android:src="@drawable/bt_home_service" />
+
+    <ImageView
+        android:id="@+id/btn_red_pacakge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_above="@id/btn_service"
+        android:layout_alignLeft="@id/btn_service"
+        android:elevation="4dp"
+        android:src="@drawable/bt_home_money" />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_location"/>
+</RelativeLayout>

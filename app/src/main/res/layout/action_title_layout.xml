@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/titlebar"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/color_primary_dark"
+    android:paddingRight="5dp"
+    android:paddingLeft="5dp">
+
+    <TextView
+        android:id="@+id/action_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/font_color_white"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/left_button"
+        android:layout_width="36dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        android:padding="2dp"
+        android:focusable="false"
+        android:scaleType="centerInside"
+        android:clickable="true"
+        android:background="@drawable/bootombar_bg"
+        app:srcCompat="@drawable/ic_chevron_left_black" />
+
+    <TextView
+        android:id="@+id/text_right_button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        android:padding="2dp"
+        android:focusable="false"
+        android:scaleType="centerInside"
+        android:visibility="invisible"
+        android:textColor="@color/font_color_white"/>
+</RelativeLayout>

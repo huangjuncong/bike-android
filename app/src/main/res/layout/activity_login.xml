@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/container_phone"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#f2f2f2">
+
+        <Spinner
+            android:id="@+id/spinner_item"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:entries="@array/country_code"
+            android:gravity="center" />
+
+        <com.coder520.mamabike.ui.widget.EditTextWithRightCleanButton
+            android:id="@+id/edit_phone_number"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:gravity="center|left"
+            android:hint="@string/input_phone_number"
+            android:textSize="@dimen/font_size_common" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_get_authentication"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="@string/get_authentication_code"
+        android:background="@drawable/bg_button_common"
+        android:textColor="@color/font_color_white"
+        android:textSize="@dimen/font_size_common"
+        android:enabled="false"
+        android:layout_alignTop="@+id/linearLayout"
+        android:layout_alignRight="@+id/container_phone"
+        android:layout_alignEnd="@+id/container_phone" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/container_phone"
+        android:layout_toLeftOf="@id/btn_get_authentication"
+        android:layout_alignLeft="@id/container_phone"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:background="#f2f2f2"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/authentication_code"
+            android:textSize="@dimen/font_size_common" />
+
+        <EditText
+            android:id="@+id/edit_verify_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:background="@android:color/transparent"
+            android:hint="@string/hint_input_authentication"
+            android:textSize="@dimen/font_size_common" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="53dp"
+        android:background="@drawable/bg_button_common"
+        android:text="@android:string/ok"
+        android:textSize="@dimen/font_size_common"
+        android:textColor="@color/font_color_white"
+        android:textStyle="bold"
+        android:enabled="false"
+        android:layout_alignLeft="@id/container_phone"
+        android:layout_alignRight="@id/container_phone"
+        android:layout_below="@+id/btn_get_authentication" />
+</RelativeLayout>
